@@ -20,7 +20,19 @@
 			</div>			
 		</nav>
 	</div>
+	<hr/>
 	<div class="content">
 		<%= @post.content %>
 	</div>
+</section>
+
+<section class="section comments">
+	<div class="container">
+		<h2 class="subtitle is-5"><strong><%= @post.comments.count %></strong> Comments</h2>
+		<%= render @post.comments %>
+	</div>
+	<hr>
+	<h4 class="subtitle is-3">Leave a reply</h4>
+	<%= render 'comments/form' %>
+
 </section>
